@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body id=”background”>
+<body id=”background” onload="myMap()">
 
 <div class="navbar">
   <a href="team.html">Team Members</a>
@@ -23,9 +23,20 @@
 
 <br>
 
-<div style="background-color:white;align:center;width:600px;height:300px;margin:auto;">
-    <button type="button">RPI Status <i class="fa fa-sitemap fa-lg" style="color:green"></i></button>
+<div style="background-color:white;align:center;width:600px;height:400px;margin:auto;">
 </div>
 
+<script>
+function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(32.9590802,-117.191622),
+    zoom:16,
+  };
+  var map=new google.maps.Map(document.getElementById("myMap"),mapProp);
+}
+</script>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+  
 </body>
 </html>
